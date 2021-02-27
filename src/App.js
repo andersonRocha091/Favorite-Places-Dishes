@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
+
+import RestaurantList from "./RestaurantList";
 
 const App = () => {
-  const [foo, setFoo] = useState('Bar');
   return (
     <div>
-      <h1>Hello world!</h1>
+      <RestaurantList />
     </div>
   );
 };
