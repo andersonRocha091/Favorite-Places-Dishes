@@ -1,6 +1,5 @@
 import React from "react";
-import { render, mount, shallow } from "enzyme";
-import jest from 'jest';
+import { shallow } from "enzyme";
 import { expect } from 'chai';
 import * as spies from "chai-spies";
 import { spy } from "sinon";
