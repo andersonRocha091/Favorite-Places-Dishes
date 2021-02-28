@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from "react";
 
 import RestaurantForm from "./RestaurantForm";
 
 const RestaurantList = () => {
-  const handleAddNewRestaurant = () => {
-
+  const [restaurantsNames, setRestaurantsNames] = useState([]);
+  const handleAddNewRestaurant = (newRestaurant) => {
+    let restaurantsNew = [newRestaurant, ...restaurantsNames];
+    setRestaurantsNames(restaurantsNew);
   };
   return (
     <div>
