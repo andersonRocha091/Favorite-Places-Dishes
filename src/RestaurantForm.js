@@ -6,7 +6,6 @@ const RestaurantForm = ({ onSave }) => {
   const handleTextChange = (event) => {
     setInputText(event.target.value);
   };
-
   return (
     <div>
       <input
