@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React from 'react';
 
-import RestaurantForm from "./RestaurantForm";
-
-const RestaurantList = () => {
-  const [restaurantsNames, setRestaurantsNames] = useState([]);
-  const handleAddNewRestaurant = (newRestaurant) => {
-    let restaurantsNew = [newRestaurant, ...restaurantsNames];
-    setRestaurantsNames(restaurantsNew);
-  };
+const RestaurantList = ({ restaurants }) => {
   return (
-    <div>
-      <button data-test="addRestaurantButton">Add Restaurant</button>
-      <RestaurantForm onSave={handleAddNewRestaurant}/>
-    </div>
+    <ul>
+      {restaurants.map((restaurantName) => (
+        <li key={restaurantName}>{restaurantName}</li>
+      ))}
+    </ul>
   );
 };
 

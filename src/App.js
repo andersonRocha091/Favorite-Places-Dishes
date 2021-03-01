@@ -1,11 +1,11 @@
 import React from "react";
 
-import RestaurantList from "./RestaurantList";
+import RestaurantPage from "./RestaurantPage";
 
 const App = () => {
   return (
     <div>
-      <RestaurantList />
+      <RestaurantPage />
     </div>
   );
 };
