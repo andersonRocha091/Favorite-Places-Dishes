@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, TextInput } from "react-materialize";
+import { Button, TextInput, Row } from "react-materialize";
 const RestaurantForm = ({ onSave }) => {
   const [inputText, setInputText] = useState("");
 
@@ -7,8 +7,11 @@ const RestaurantForm = ({ onSave }) => {
     setInputText(event.target.value);
   };
   return (
-    <div>
+    <Row>
       <TextInput
+        s={12}
+        m={8}
+        l={10}
         label="Restaurant Name"
         type="text"
         value={inputText}
@@ -16,12 +19,15 @@ const RestaurantForm = ({ onSave }) => {
         data-test="newRestaurantName"
       />
       <Button
+        s={12}
+        m={4}
+        l={2}
         data-test="saveNewRestaurantButton"
         onClick={() => onSave(inputText)}
       >
         Add
       </Button>
-    </div>
+    </Row>
   );
 };
 

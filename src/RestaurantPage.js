@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "react-materialize";
+import { Button, Row, Col } from "react-materialize";
 import RestaurantForm from "./RestaurantForm";
 import RestaurantList from "./RestaurantList";
 
@@ -15,18 +15,24 @@ const RestaurantPage = () => {
     setShowRestaurantForm(true);
   };
   return (
-    <div>
-      <Button
-        data-test="addRestaurantButton"
-        onClick={handleShowNewRestaurantForm}
-      >
-        Add Restaurant
-      </Button>
-      {showRestaurantForm ? (
-        <RestaurantForm onSave={handleAddNewRestaurant} />
-      ) : null}
-      <RestaurantList restaurants={restaurantsNames} />
-    </div>
+    <Row>
+      <Row>
+        <Button
+          data-test="addRestaurantButton"
+          onClick={handleShowNewRestaurantForm}
+        >
+          Add Restaurant
+        </Button>
+      </Row>
+      <Row>
+        {showRestaurantForm ? (
+          <RestaurantForm onSave={handleAddNewRestaurant} />
+        ) : null}
+      </Row>
+      <Row>
+        <RestaurantList restaurants={restaurantsNames} />
+      </Row>
+    </Row>
   );
 };
 

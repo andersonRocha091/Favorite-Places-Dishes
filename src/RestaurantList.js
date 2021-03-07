@@ -5,9 +5,7 @@ const RestaurantList = ({ restaurants }) => {
   return (
     <Row>
       <Col m={6} s={12}>
-        <Collection
-          header="Restaurants"
-        >
+        <Collection>
           {restaurants.map((restaurantName) => (
             <CollectionItem key={restaurantName}>{restaurantName}</CollectionItem>
           ))}
