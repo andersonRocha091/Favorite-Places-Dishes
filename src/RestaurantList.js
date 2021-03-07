@@ -1,12 +1,19 @@
 import React from 'react';
+import { Collection, CollectionItem, Row, Col } from "react-materialize";
 
 const RestaurantList = ({ restaurants }) => {
   return (
-    <ul>
-      {restaurants.map((restaurantName) => (
-        <li key={restaurantName}>{restaurantName}</li>
-      ))}
-    </ul>
+    <Row>
+      <Col m={6} s={12}>
+        <Collection
+          header="Restaurants"
+        >
+          {restaurants.map((restaurantName) => (
+            <CollectionItem key={restaurantName}>{restaurantName}</CollectionItem>
+          ))}
+        </Collection>
+      </Col>
+    </Row>
   );
 };
 
