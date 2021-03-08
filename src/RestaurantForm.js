@@ -22,6 +22,7 @@ const RestaurantForm = ({ onSave }) => {
         s={12}
         m={4}
         l={2}
+        className="modal-close"
         data-test="saveNewRestaurantButton"
         onClick={() => onSave(inputText)}
       >
