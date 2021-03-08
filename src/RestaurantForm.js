@@ -9,9 +9,7 @@ const RestaurantForm = ({ onSave }) => {
   return (
     <Row>
       <TextInput
-        s={12}
-        m={8}
-        l={10}
+        s={12} m={8} l={10}
         label="Restaurant Name"
         type="text"
         value={inputText}
@@ -19,9 +17,7 @@ const RestaurantForm = ({ onSave }) => {
         data-test="newRestaurantName"
       />
       <Button
-        s={12}
-        m={4}
-        l={2}
+        s={12} m={4} l={2}
         className="modal-close"
         data-test="saveNewRestaurantButton"
         onClick={() => onSave(inputText)}
